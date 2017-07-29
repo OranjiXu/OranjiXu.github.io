@@ -65,7 +65,9 @@
     </nav>
 
     <!-- Full Width Image Header -->
-    <header id="top" class="header-image">
+
+<section id="top">
+    <header class="header-image">
         <div class="headline">
             <div data-scroll-reveal class="container">
                 <h1>Welcome</h1>
@@ -73,12 +75,12 @@
             </div>
         </div>
     </header>
-
+</section>
     <!-- Page Content -->
-    <div class="container">
 
-        <hr id="about" class="featurette-divider">
-
+<div class="container">
+<section id="about">
+        <hr class="featurette-divider">
         <!-- First Featurette -->
         <div data-scroll-reveal class="featurette" >
             <img class="featurette-image img-circle img-responsive pull-right" src="img/f1.png">
@@ -87,9 +89,9 @@
             </h2>
             <p class="lead">我是許智翔，綽號橘仔，就讀資訊科系，私底下的興趣是美術設計，所以學習資訊相關課程之餘，也自學繪圖軟體。我認為好的程式同時需要好的設計來呈現，兩者缺一不可。</p><p class="lead"><span class="glyphicon glyphicon-envelope"></span> 信箱:q3040920004@gmail.com</p>
         </div>
-
-        <hr id="experience" class="featurette-divider">
-
+</section>
+<section id="experience" >
+        <hr class="featurette-divider">
         <!-- Second Featurette -->
         <div data-scroll-reveal class="featurette">
             <img class="featurette-image img-circle img-responsive pull-left" src="img/f2.png">
@@ -98,16 +100,15 @@
             </h2>
             <p class="lead">學歷- </p><p class="lead">國立高雄第一科技大學 資訊管理系</p><p class="lead">工作經歷- </p><p class="lead">2014-2017 智慧菓科技有限公司 美術設計師(實習)</p>
         </div>
-
-        <hr id="portfolio" class="featurette-divider">
-
+</section>
+    <section id="portfolio">
+        <hr class="featurette-divider">
         <!-- Third Featurette -->
     <div class="featurette" >
             <h2 class="featurette-heading">作品
                 <span class="text-muted">Portfolio</span>
             </h2>	
     <!-- Portfolio Grid Section -->
-    <section id="portfolio">
         <div data-scroll-reveal class="container">
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
@@ -167,16 +168,19 @@
                 </div>                
             </div>
         </div>
-    </section>	
 	</div>
+    </section>	
+	
 <!---->
 <!-- Portfolio2 Grid Section -->
-	<hr id="schoolworks" class="featurette-divider">
+
+<section id="schoolworks">
+	<hr class="featurette-divider">
 	<div class="featurette" >
             <h2 class="featurette-heading">學校作品
                 <span class="text-muted">School Works</span>
-            </h2>
-    <section id="portfolio">
+            </h2>	 
+    <div id="portfolio">
         <div data-scroll-reveal class="container">
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
@@ -225,13 +229,10 @@
                 </div>
             </div>
         </div>
-    </section>
-			
-            
-	</div>
+    </div>
+			</section>
 
         <hr class="featurette-divider">
-
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -239,9 +240,9 @@
                     <p>Copyright &copy; Orange 2017</p>
                 </div>
             </div>
-        </footer>
+        </footer>	</div>
 
-
+</div>
 		    <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -590,7 +591,7 @@
 
     <!-- jQuery -->
 	<script src="js/jquery.js"></script>
-	
+
 	
 <script>
 $(function(){ 
@@ -601,22 +602,38 @@ $('.navbar a').on('click', function(){
 }
 });
 
-	$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
+var sections = $('section')
+  , nav = $('nav')
+  , nav_height = nav.outerHeight();
+
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+  
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+    
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      sections.removeClass('active');
+      
+      $(this).addClass('active');
+      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
     }
-  });  
+  });
+});
+
+nav.find('a').on('click', function () {
+  var $el = $(this)
+    , id = $el.attr('href');
+  
+  $('html, body').animate({
+    scrollTop: $(id).offset().top - nav_height
+  }, 500);
+  
+  return false;
 });
 </script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <!--animate-->
