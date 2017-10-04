@@ -48,25 +48,29 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#top"><span class="glyphicon glyphicon-home"></span></a>
+				<div id="totop"><a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#about">About Me</a>
                     </li>
                     <li>
                         <a href="#experience">Experience</a>
                     </li>
+					<li>
+                        <a href="#web">Web Design</a>
+                    </li>
                     <li>
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#commercial">Commercial</a>
                     </li>
 					<li>
                         <a href="#schoolworks">School Works</a>
                     </li>
 					<li>
-                        <a href="#fanart">Fan Art</a>
-                    </li>
+                        <a href="#fanart">Fan Arts</a>
+                    </li>					
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -95,7 +99,7 @@
         <div data-scroll-reveal class="featurette" >
             <img class="featurette-image img-circle img-responsive pull-right" src="img/f1.png">
             <h2 class="featurette-heading">關於我
-                <span class="text-muted">About</span>
+                <span class="text-muted">About Me</span>
             </h2>
             <p class="lead">我是許智翔，綽號橘仔，就讀資訊科系，私底下的興趣是美術設計，所以學習資訊相關課程之餘，也自學繪圖軟體。我認為好的程式同時需要好的設計來呈現，兩者缺一不可。</p>
 			<p class="lead">部落格: <a target="_blank" href="https://oranjixu.github.io/blog/">Orange's blog</a></p>
@@ -113,17 +117,39 @@
             <p class="lead">學歷- </p><p class="lead">國立高雄第一科技大學 資訊管理系</p><p class="lead">工作經歷- </p><p class="lead">2014-2017 智慧菓科技有限公司 美術設計師(實習)</p>
         </div>
 </section>
-    <section id="portfolio">
-        <hr class="featurette-divider">
-        <!-- Third Featurette -->
-    <div class="featurette" >
-            <h2 class="featurette-heading">作品
-                <span class="text-muted">Portfolio</span>
-            </h2>	
-    <!-- Portfolio Grid Section -->
-        <div data-scroll-reveal class="container">
+<!--web design-->
+<section id="web">
+	<hr class="featurette-divider">
+	<div class="featurette" >
+            <h2 class="featurette-heading">網頁設計
+                <span class="text-muted">Web Design</span>
+            </h2>	 
+    <div class="portfolio">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
+                    <a data-target="#portfolioModal17" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <span class="glyphicon glyphicon-zoom-in"></span>
+                            </div>
+                        </div>
+                        <img src="img/w2-t.jpg" class="img-responsive" alt="">						
+                    </a>
+					<div class="portfolioDescription"><span class="glyphicon glyphicon-home"></span> 網頁作品：Orange's blog</div>
+                </div>
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
+                    <a data-target="#portfolioModal16" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <span class="glyphicon glyphicon-zoom-in"></span>
+                            </div>
+                        </div>
+                        <img src="img/w1-t.jpg" class="img-responsive" alt="">
+                    </a>
+					<div class="portfolioDescription"><span class="glyphicon glyphicon-home"></span> 網頁作品：Orange-Design X Art</div>
+                </div>                
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -134,7 +160,34 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-home"></span> 網頁作品：竹田動漫季官方網站</div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+            </div>
+        </div>
+    </div></div>
+</section>
+<!---->
+    <section id="commercial">	
+	<hr class="featurette-divider">	
+        <!-- Third Featurette -->
+		<div class="portfolio">
+    <div class="featurette" >
+            <h2 class="featurette-heading">商業作品
+                <span class="text-muted">Commercial Projects</span>
+            </h2>	
+    <!-- Portfolio Grid Section -->
+        <div class="container">
+            <div class="row">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
+                    <a data-target="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <span class="glyphicon glyphicon-zoom-in"></span>
+                            </div>
+                        </div>
+                        <img src="img/p1-t.jpg" class="img-responsive" alt="">						
+                    </a>
+					<div class="portfolioDescription"><span class="glyphicon glyphicon-home"></span> 網頁作品：竹田動漫季官方網站</div>
+                </div>
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -145,7 +198,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-pencil"></span> 遊戲美術：尤維里大富翁遊戲</div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -156,7 +209,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-pencil"></span> 遊戲美術：小資狗資源回收App遊戲</div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -167,7 +220,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-pencil"></span> 插畫作品：屏東農娘電繪大賞</div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -181,21 +234,22 @@
             </div>
         </div>
 	</div>
+	</div>
     </section>	
 	
 <!---->
 <!-- Portfolio2 Grid Section -->
 
-<section id="schoolworks">
 	<hr class="featurette-divider">
+<section id="schoolworks">
 	<div class="featurette" >
             <h2 class="featurette-heading">學校作品
                 <span class="text-muted">School Works</span>
             </h2>	 
-    <div id="portfolio">
-        <div data-scroll-reveal class="container">
+    <div class="portfolio">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -206,7 +260,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-phone"></span> 遊戲作品：書架上的世界</div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal7" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -217,7 +271,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-user"></span> 提案發想：造樹者</div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal9" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -228,7 +282,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-pencil"></span> 遊戲美術：布蘭教授的瘋狂收藏</div>
                 </div>				
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal8" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -242,18 +296,21 @@
             </div>
         </div>
     </div>
+	</div>
 </section>
 <!-- fanart -->
+
+
 <section id="fanart">
 	<hr class="featurette-divider">
 	<div class="featurette" >
             <h2 class="featurette-heading">二次創作
-                <span class="text-muted">Fan Art</span>
+                <span class="text-muted">Fan Arts</span>
             </h2>	 
-    <div id="portfolio">
-        <div data-scroll-reveal class="container">
+    <div class="portfolio">
+        <div class="container">
             <div class="row">
-				<div class="col-sm-4 portfolio-item">
+				<div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal15" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -264,7 +321,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-pencil"></span> 二創作品：庫洛魔法使</div>
                 </div>
-				<div class="col-sm-4 portfolio-item">
+				<div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal14" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -275,7 +332,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-pencil"></span> 二創作品：綠谷出久</div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal10" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -286,7 +343,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-pencil"></span> 二創作品：小林家的龍女僕</div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal11" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -297,7 +354,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-pencil"></span> 二創作品：Closers 封印者</div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal12" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -308,7 +365,7 @@
                     </a>
 					<div class="portfolioDescription"><span class="glyphicon glyphicon-pencil"></span> 二創作品：地獄少女</div>
                 </div>				
-                <div class="col-sm-4 portfolio-item">
+                <div data-scroll-reveal class="col-sm-4 portfolio-item">
                     <a data-target="#portfolioModal13" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -321,7 +378,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div></div>
 </section>
 
         <hr class="featurette-divider">
@@ -332,7 +389,8 @@
                     <p>Copyright &copy; Orange 2017</p>
                 </div>
             </div>
-        </footer>	</div>
+        </footer>	
+
 
 </div>
 		    <!-- Portfolio Modals -->
@@ -351,7 +409,7 @@
                             <h2>網頁作品：竹田動漫季官方網站</h2>
                             <hr class="star-primary">
                             <img src="img/p1.png" class="img-responsive img-centered" alt="">
-                            <p>此專案是我在智慧菓科技有限公司實習期間，首次的網頁設計作品，是使用Bootstrap框架架設的響應式網站。除了官網的建置，還包含網路報名系統的前端美化。</p>
+                            <p>此專案是我在智慧菓科技有限公司實習期間，是使用Bootstrap框架架設的響應式網站。除了官網的建置，還包含網路報名系統的前端美化。</p>
                             <ul class="list-inline item-details">
                                 <li>使用工具:
                                     <strong>html,CSS,JavaScript,PHP
@@ -862,6 +920,80 @@
                                     <strong>2017 summer
                                     </strong>
                                 </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolioModal16" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>網頁作品：Orange-Design X Art</h2>
+                            <hr class="star-primary">
+                            <img src="img/w1.jpg" class="img-responsive img-centered" alt="">
+                            <p>放置我各式作品的個人網站，也就是訪客您目前正在瀏覽的網頁。</p>
+                            <ul class="list-inline item-details">
+                                <li>使用工具:
+                                    <strong>html,CSS,JavaScript
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong>2017 summer</a>
+                                    </strong>
+                                </li>
+                                <li>連結:
+                                    <strong><a target="_blank" href="https://oranjixu.github.io/">連結</a>
+                                    </strong>
+                                </li>                                
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolioModal17" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>網頁作品：Orange's blog</h2>
+                            <hr class="star-primary">
+                            <img src="img/w2.jpg" class="img-responsive img-centered" alt="">
+                            <p>裡面放置我的繪圖、程式心得及心情雜談的部落格。</p>
+                            <ul class="list-inline item-details">
+                                <li>使用工具:
+                                    <strong>html,CSS,JavaScript
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong>2017 summer</a>
+                                    </strong>
+                                </li>
+                                <li>連結:
+                                    <strong><a target="_blank" href="https://oranjixu.github.io/blog/">連結</a>
+                                    </strong>
+                                </li>                                
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
