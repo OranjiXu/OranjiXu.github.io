@@ -279,8 +279,7 @@ section.success {
 
 .portfolio .portfolio-item {
   margin: 0 0 15px;
-  right: 0;
-  cursor:pointer;
+  right: 0;  
 }
 .portfolio .portfolio-item .portfolio-link {
   display: block;
@@ -300,6 +299,7 @@ section.success {
 }
 .portfolio .portfolio-item .portfolio-link .caption:hover {
   opacity: 1;
+  cursor:pointer;
 }
 .portfolio .portfolio-item .portfolio-link .caption .caption-content {
   position: absolute;
